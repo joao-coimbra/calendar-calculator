@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+* {
+    font-family: Ubuntu, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+
+    height: 100vh;
+    width: 70%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.change-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+button.minus, button.plus {
+    width: 40px;
+    height: 40px;
+    
+    font-size: 24px;
+    font-weight: bold;
+
+    border: solid black 2px;
+    transition: all 300ms;
+}
+
+button.reset-date {
+    height: 40px;
+
+    font-size: 18px;
+
+    border: solid black 1px;
+    transition: all 300ms;
+}
+
+button.minus:hover, button.plus:hover, button.reset-date:hover {
+    color: white;
+}
+
+button.minus:hover {
+    background-color: red;
+}
+
+button.plus:hover {
+    background-color: green;
+}
+
+button.reset-date:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+input {
+    height: 40px;
+
+    padding: 0 5px 0 10px;
+    margin: 0 10px;
+
+    font-size: 24px;
+
+    border: solid black 2px;
+}
+
+.calendar {
+    background-color: #fffafa;
+
+    width: 250px;
+    height: 250px;
+
+    margin: 30px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 20px;
+
+    /* box-shadow: 4px 4.5px rgba(0, 0, 0, 0.3); */
+}
+
+.calendar::after {
+    content: "";
+    width: 258px;
+    height: 258px;
+
+    transform: translateY(-4px);
+
+    position: absolute; 
+
+    background-color: black;
+
+    border-radius: 24px;
+
+    z-index: -3;
+}
+
+.calendar span.month {
+
+    background-color: orangered;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+
+    border-radius: 20px 20px 0 0;
+
+    width: 250px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.calendar .box {
+    width: 60%;
+    height: 60%;
+    margin-bottom: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calendar .box span {
+    font-size: 24px;
+}
+
+.calendar .box span.day {
+    font-size: 68px;
+    font-weight: 700;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@media(max-height: 470px) {
+
+    .calendar::after {
+        height: 236.5px;
+    }
+
+}
