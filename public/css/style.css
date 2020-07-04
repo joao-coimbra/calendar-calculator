@@ -184,21 +184,25 @@ footer a:nth-child(1) span {
 }
 
 footer a:nth-child(2) span {
-    background-image: url('../assets/twitter.svg');
+    background-image: url('../assets/linkedin.svg');
 }
 
 footer a:nth-child(3) span {
-    background-image: url('../assets/email-outline.svg');
+    background-image: url('../assets/codepen-icon.svg');
 }
 
 ::-webkit-scrollbar {
     display: none;
 }
 
-@media(max-height: 470px) {
+@media(max-height: 450px) {
 
     .calendar::after {
         height: 236.5px;
+    }
+
+    footer {
+        display: none;
     }
 
 }
